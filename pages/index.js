@@ -1,62 +1,73 @@
 import Head from 'next/head'
+import Link from 'next/link'
+import Image from 'next/image'
+
+const ImgComponent = (props) => {
+  return (
+    <a href="">
+      <Image
+        src={props.file} // Route of the image file
+        height={props.height} // Desired size with correct aspect ratio
+        width={props.width} // Desired size with correct aspect ratio
+        alt="Your photo"
+      />
+    </a>
+  )
+}
 
 export default function Home() {
   return (
     <div className="container">
+      < ImgComponent file="/images/arte.png" height="86" width="200" />
       <Head>
-        <title>Create Next App</title>
+        <title>Gtek</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
+      <div className="infos">
+        <h3>
+          <p className="dominio-tr">Revenda Autorizada Domínio < ImgComponent file="/images/tr-img2.png" height="46" width="52" />
+            {' '} THOMSON REUTERS</p>
+        </h3>
+      </div>
       <main>
-        <h1 className="title">
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
 
         <p className="description">
-          Get started by editing <code>pages/index.js</code>
+          Para conhecer mais, acesse a <a href="https://www.dominiosistemas.com.br/" target="_blank">Página</a>
         </p>
 
         <div className="grid">
-          <a href="https://nextjs.org/docs" className="card">
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
+          <a href="" className="card">
+            <h3>Nosso produtos &rarr;</h3>
+            <p>Conheça mais sobre nossos produtos.</p>
           </a>
 
-          <a href="https://nextjs.org/learn" className="card">
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className="card"
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
+          <a href="" className="card">
+            <h3>Nossos serviços &rarr;</h3>
+            <p>Conheça mais sobre nossos serviços.</p>
           </a>
 
           <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+            href=""
             className="card"
           >
-            <h3>Deploy &rarr;</h3>
+            <h3>Equipe &rarr;</h3>
+            <p>Conheça mais sobre a nossa equipe</p>
+          </a>
+
+          <a
+            href=""
+            className="card"
+          >
+            <h3>Sobre nós &rarr;</h3>
             <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
+              Saiba mais sobre a equipe GTEK SM
             </p>
           </a>
         </div>
       </main>
 
       <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className="logo" />
-        </a>
+        <p>Powered by <b className="powered">Gtek SM</b></p>
       </footer>
 
       <style jsx>{`
@@ -70,7 +81,6 @@ export default function Home() {
         }
 
         main {
-          padding: 5rem 0;
           flex: 1;
           display: flex;
           flex-direction: column;
@@ -97,13 +107,29 @@ export default function Home() {
           align-items: center;
         }
 
+        p {
+          color: white;
+        }
+
         a {
-          color: inherit;
+          color: rgb(255, 40, 0);
           text-decoration: none;
         }
 
+        b {
+          color: rgb(255, 40, 0);
+        }
+
+        h3 {
+          color: rgb(255, 40, 0);
+        }
+
+        h3:hover {
+          color: rgb(255, 40, 0);
+        }
+
         .title a {
-          color: #0070f3;
+          color: rgb(255, 40, 0);
           text-decoration: none;
         }
 
@@ -119,6 +145,8 @@ export default function Home() {
           font-size: 4rem;
         }
 
+        
+
         .title,
         .description {
           text-align: center;
@@ -127,6 +155,12 @@ export default function Home() {
         .description {
           line-height: 1.5;
           font-size: 1.5rem;
+        }
+
+        .dominio-tr {
+          display: flex;
+          justify-content: center;
+          align-items: center;
         }
 
         code {
@@ -163,8 +197,8 @@ export default function Home() {
         .card:hover,
         .card:focus,
         .card:active {
-          color: #0070f3;
-          border-color: #0070f3;
+          color: rgb(255, 60, 0);
+          border-color: rgb(255, 40, 0);
         }
 
         .card h3 {
@@ -181,6 +215,7 @@ export default function Home() {
         .logo {
           height: 1em;
         }
+        
 
         @media (max-width: 600px) {
           .grid {
