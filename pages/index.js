@@ -108,7 +108,6 @@ export default function Home() {
           text-align: center;
           justify-content: center;
           align-items: center;
-          margin: 3vw;
         }
 
         p {
