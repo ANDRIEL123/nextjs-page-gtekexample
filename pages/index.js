@@ -18,18 +18,20 @@ const ImgComponent = (props) => {
 export default function Home() {
   return (
     <div className="container">
-      < ImgComponent file="/images/arte.png" height="86" width="200" />
+      < ImgComponent file="/images/logo.png" height="106" width="300" />
       <Head>
         <title>Gtek</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="infos">
-        <h3>
-          <p className="dominio-tr">Revenda Autorizada Domínio < ImgComponent file="/images/tr-img2.png" height="46" width="52" />
-            {' '} THOMSON REUTERS</p>
-        </h3>
-      </div>
       <main>
+        <div className="infos">
+          <h3>
+            <p className="dominio-tr">Revenda Autorizada Domínio
+            {''}<br></br>< ImgComponent file="/images/tr-img2.png" height="46" width="52" />
+              {' '} <br></br>THOMSON REUTERS</p>
+          </h3>
+        </div>
+
 
         <p className="description">
           Para conhecer mais, acesse a <a href="https://www.dominiosistemas.com.br/" target="_blank">Página</a>
@@ -79,7 +81,7 @@ export default function Home() {
           justify-content: center;
           align-items: center;
         }
-
+        
         main {
           flex: 1;
           display: flex;
@@ -99,6 +101,18 @@ export default function Home() {
 
         footer img {
           margin-left: 0.5rem;
+        }
+        
+        .infos {
+          display: flex;
+          text-align: center;
+          justify-content: center;
+          align-items: center;
+          margin: 3vw;
+        }
+
+        p {
+          text-align: center;
         }
 
         footer a {
@@ -155,12 +169,6 @@ export default function Home() {
         .description {
           line-height: 1.5;
           font-size: 1.5rem;
-        }
-
-        .dominio-tr {
-          display: flex;
-          justify-content: center;
-          align-items: center;
         }
 
         code {
